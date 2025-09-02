@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Chat with My Document</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+    #chat { border: 1px solid #ddd; border-radius: 12px; padding: 1rem; min-height: 320px; }
+    .msg { margin: .7rem 0; white-space: pre-wrap; }
+    .role { font-weight: 600; }
+    .user { color: #1f6feb; }
+    .assistant { color: #0a7d13; }
+    #row { display: flex; gap: .5rem; margin-top: 1rem; }
+    textarea { flex: 1; border: 1px solid #ccc; border-radius: 8px; padding: .6rem; }
+    button { border: 0; border-radius: 8px; padding: .6rem 1rem; background: #000; color: #fff; }
+    button:disabled { opacity: .6; }
+  </style>
+</head>
+<body>
+  <h1>Chat with My Document</h1>
+  <div id="chat"></div>
+  <div id="row">
+    <textarea id="box" rows="2" placeholder="Ask anything..."></textarea>
+    <button id="send">Send</button>
+  </div>
+
+  <!-- In-browser models -->
+  <script src="https://cdn.jsdelivr.net/npm/@mlc-ai/web-llm/dist/web-llm.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@xenova/transformers/dist/transformers.min.js"></script>
+  <script src="app.js" defer></script>
+</body>
+</html>
